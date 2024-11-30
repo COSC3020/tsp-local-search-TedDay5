@@ -50,3 +50,13 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+Worst-case asymptotic complexity: $\Theta(|n|^5)$
+
+A random generation of order $\Theta(|n|)$ swaps i for a randomly selected element, and sees if the solution is less than the stored value.
+Which happens  $(|n|^4)$ times.
+The overall nested sum computation is $\Theta(|n|)$ time * $(|n|^4)$ times = $\Theta(|n|^5)$
+
+Worst-case memory complexity: $\Theta(|n|)$
+
+Factors such as distance, previous element, i, and k are kept track of.
