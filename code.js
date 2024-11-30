@@ -49,7 +49,7 @@ function tsp_ls(distance_matrix) {
 function swap(array, element1, element2) {
     var tmp = array[element1];
     array[element1] = array[element2];
-    arary[element2] = tmp;
+    array[element2] = tmp;
 
     return;
 }
