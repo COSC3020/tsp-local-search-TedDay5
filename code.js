@@ -19,8 +19,8 @@ function tsp_ls(distance_matrix) {
 
     let attempt = 0;
     let previous = null;
-    let fixed = 0;
-    let index = 2;
+    let i_fixed = 0;
+    let k_index = 2;
 
     while(attempt < (l ** 4)) {
         attempt++;
@@ -30,18 +30,18 @@ function tsp_ls(distance_matrix) {
             minimum = tmp;
         }
 
-        index = Math.floor(1 + Math.random() * (l - 1));
+        k_index = Math.floor(1 + Math.random() * (l - 1));
 
-        if(previous === index) {
-            if(index === 1) {
-                index++;
+        if(previous === k_index) {
+            if(k_index === 1) {
+                k_index++;
             }
             else {
-                index--;
+                k_index--;
             }
         }
-        swap(squence, fixed, index);
-        previous = index;
+        swap(squence, i_fixed, k_index);
+        previous = k_index;
     }
     return minimum;
 }
