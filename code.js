@@ -23,7 +23,7 @@ function tsp_ls(distance_matrix) {
     let index = 2;
 
     while(attempt < (l ** 4)) {
-        atempt++;
+        attempt++;
         tmp = distance(distance_matrix, squence);
 
         if(tmp < minimum) {
