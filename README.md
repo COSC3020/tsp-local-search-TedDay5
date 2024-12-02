@@ -54,7 +54,7 @@ reasoning, to this markdown file.
 Worst-case asymptotic complexity: $\Theta(n^5)$
 
 For termination, I have an attempt variable that increases each attempt and once it's over 4 attempts it uses the best of the 4 attempts.
-n is the nuber of cities.
+n is the number of cities.
 A random generation of order $\Theta(n)$ swaps i for a randomly selected element, and sees if the solution is less than the stored value.
 Which happens  $(n^4)$ times.
 The overall nested sum computation is $\Theta(n)$ time * $(n^4)$ times = $\Theta(n^5)$
