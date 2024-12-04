@@ -51,17 +51,19 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
-Worst-case asymptotic complexity: $\Theta(n^5)$
+Worst-case asymptotic complexity: $\Theta(2^n * n^2)$
+
+There are $2^n$ possible subsets for $n$ cities.
+For each subset, recursive calls are made to figure out the minimum tour length which takes $\Theta(n)$ time.
 
 For termination, I have an attempt variable that increases each attempt and once it's over 4 attempts it uses the best of the 4 attempts.
 n is the number of cities.
 A random generation of order $\Theta(n)$ swaps i for a randomly selected element, and sees if the solution is less than the stored value.
-Which happens  $(n^4)$ times.
-The overall nested sum computation is $\Theta(n)$ time * $(n^4)$ times = $\Theta(n^5)$
 
-Worst-case memory complexity: $\Theta(n)$
+Worst-case memory complexity: $\Theta(2^n * n)$
 
-Factors such as distance, previous element, i, and k are kept track of.
+There are $2^n$ possible subsets for $n$ cities.
+The recursive call stack can reach $n$ in the worst case since it can explore all routes.
 
 “I certify that I have listed all sources used to complete this exercise, including the use
 of any Large Language Models. All of the work is my own, except where stated
