@@ -53,7 +53,7 @@ reasoning, to this markdown file.
 
 Worst-case asymptotic complexity: $\Theta(n^5)$
 
-For termination, I have an attempt variable that increases each attempt and once it's over $l^4$ attempts it uses the best of the $l^4$ attempts.
+For termination, I have an attempt variable that increases each attempt and once it's over $n^4$ attempts it uses the best of the $n^4$ attempts.
 $n$ is the number of cities.
 
 The outer for loops for iterations is 2 nested loops, takes  $\Theta(n^2)$ time.
