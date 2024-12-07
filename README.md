@@ -56,12 +56,13 @@ Worst-case asymptotic complexity: $\Theta(n^5)$
 For termination, I have an attempt variable that increases each attempt and once it's over $n^4$ attempts it uses the best of the $n^4$ attempts.
 $n$ is the number of cities.
 
-The outer for loops for iterations is 2 nested loops, takes  $\Theta(n^2)$ time.
-The inner for loops each iteration checks all pairs of cities which is 2 nested loops, takes  $\Theta(n^2)$ time.
-The minimum tour length calculation made for each route by swaping, takes  $\Theta(n)$ time.
+Creating the sequential array takes $\Theta(n)$ time.
+The main loop runs $n^4$ times, each time it calculates the distance using the distance function and uses the swap function.
+calculating the distance takes $\Theta(n)$ time.
+Swapping elements in the sequential array takes $\Theta(1)$ time.
 
-The overall nested sum computation is $\Theta(n^2)$ * $(n^2)$ * $n$ = $\Theta(n^5)$
-The complexity is $\Theta(n^5)$ is caused by the nested for loops and the number of iterations, not because of the number of attempts.
+The overall nested sum computation is $\Theta(n^4)$ * $n$ + $\Theta(n)$ + $\Theta(n)$ = $\Theta(n^5)$
+The complexity is $\Theta(n^5)$ is caused by the for loops and the number of iterations, not because of the number of attempts.
 
 Worst-case memory complexity: $\Theta(n)$
 
