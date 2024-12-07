@@ -61,7 +61,7 @@ The main loop runs $n^4$ times, each time it calculates the distance using the d
 calculating the distance takes $\Theta(n)$ time.
 Swapping elements in the sequential array takes $\Theta(1)$ time.
 
-The overall nested sum computation is $\Theta(n^4)$ * $n$ + $\Theta(n)$ + $\Theta(n)$ = $\Theta(n^5)$
+The overall nested sum computation is $\Theta(n^4)$ * $\Theta(n)$ + $\Theta(n)$ + $\Theta(n)$ = $\Theta(n^5)$
 The complexity is $\Theta(n^5)$ is caused by the for loops and the number of iterations, not because of the number of attempts.
 
 Worst-case memory complexity: $\Theta(n)$
