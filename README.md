@@ -50,3 +50,25 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+Worst-case asymptotic complexity: $\Theta(n^5)$
+
+For termination, I have an attempt variable that increases each attempt and once it's over $n^4$ attempts it uses the best of the $n^4$ attempts.
+$n$ is the number of cities.
+
+Creating the sequential array takes $\Theta(n)$ time.
+The main loop runs $n^4$ times, each time it calculates the distance using the distance function and uses the swap function.
+calculating the distance takes $\Theta(n)$ time.
+Swapping elements in the sequential array takes $\Theta(1)$ time.
+
+The overall nested sum computation is $\Theta(n^4)$ * $\Theta(n)$ + $\Theta(n)$ + $\Theta(n)$ = $\Theta(n^5)$
+The complexity is $\Theta(n^5)$ is caused by the for loops and the number of iterations, not because of the number of attempts.
+
+Worst-case memory complexity: $\Theta(n)$
+
+Factors such as distance, previous element, i, and k are kept track of.
+
+“I certify that I have listed all sources used to complete this exercise, including the use
+of any Large Language Models. All of the work is my own, except where stated
+otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
+suspected, charges may be filed against me without prior notice.”
